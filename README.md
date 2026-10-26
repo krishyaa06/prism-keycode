@@ -78,6 +78,7 @@ prism-keycode/
 │   └── core.test.js
 ├── .gitignore
 ├── LICENSE
+├── README.md
 ├── index.html
 └── package.json
 ```
