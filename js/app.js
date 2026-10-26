@@ -7,7 +7,7 @@
     const d = Core.describe(e);
     $("#hint").textContent = d.repeat ? "Holding…" : "Last key"; $("#big").textContent = d.label;
     $("#f-key").textContent = JSON.stringify(d.key); $("#f-code").textContent = d.code || "—"; $("#f-keyCode").textContent = d.keyCode; $("#f-location").textContent = d.location;
-    $$("#mods span").forEach((s) => s.classList.toggle("on", d.mods.includes(s.dataset.m)));
+    $$("#mods span").forEach((s) => s.classList.toggle("on", d.mods.includes(s.dataset.m.toLowerCase())));
     $("#combo").textContent = Core.combo(e, mac ? "mac" : "other");
     last = { key: e.key, code: e.code, ctrlKey: e.ctrlKey, altKey: e.altKey, shiftKey: e.shiftKey, metaKey: e.metaKey };
     $("#code").textContent = Core.snippets(last)[view];
@@ -22,7 +22,7 @@
     if (!(e.metaKey && ["r", "R"].includes(e.key)) && !(e.ctrlKey && ["r", "R"].includes(e.key))) e.preventDefault();
     show(e);
   });
-  document.addEventListener("keyup", (e) => $$("#mods span").forEach((s) => s.classList.toggle("on", Core.describe(e).mods.includes(s.dataset.m))));
+  document.addEventListener("keyup", (e) => $$("#mods span").forEach((s) => s.classList.toggle("on", Core.describe(e).mods.includes(s.dataset.m.toLowerCase()))));
   tabs($("#snip"), (v) => { view = v; if (last) $("#code").textContent = Core.snippets(last)[view]; });
   $("#copy").onclick = () => copy($("#code").textContent);
   $("#clear").onclick = () => { hist.length = 0; renderHist(); };
