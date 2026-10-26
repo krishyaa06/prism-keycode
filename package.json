@@ -1,0 +1,30 @@
+{
+  "name": "prism-keycode",
+  "version": "1.0.0",
+  "description": "Keyboard event inspector showing key, code, keyCode, location and modifiers with JS/React/hotkeys snippets.",
+  "scripts": {
+    "test": "node --test",
+    "start": "npx --yes serve ."
+  },
+  "keywords": [
+    "keyboard",
+    "keycode",
+    "keyboard-shortcuts",
+    "hotkeys",
+    "javascript",
+    "react",
+    "dev-tools",
+    "vanilla-js",
+    "prism-protocol"
+  ],
+  "author": "Soumya Bhandare (krishyaa06)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krishyaa06/prism-keycode.git"
+  },
+  "homepage": "https://krishyaa06.github.io/prism-keycode/",
+  "engines": {
+    "node": ">=18.17"
+  }
+}
